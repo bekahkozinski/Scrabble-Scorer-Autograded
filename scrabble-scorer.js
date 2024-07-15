@@ -25,7 +25,7 @@ function oldScrabbleScorer(word) {
 		 }
 	  }
 	}
-	return `Score for '${word}': ${letterPoints}\n`;
+	return letterPoints;;
  }
 
 // your job is to finish writing these functions and variables that we've named //
@@ -35,10 +35,7 @@ let newPointStructure;
 
 function simpleScorer(word) {
    word = word.toUpperCase();
-   let letterPoints = 0;
-   letterPoints = parseInt(word.length);
-
-   return `Score for '${word}': ${letterPoints}\n`;
+   return word.length;
 }
 
 function vowelBonusScorer(word) {
@@ -52,7 +49,7 @@ function vowelBonusScorer(word) {
          letterPoints += 1;
       }
    }
-   return letterPoints = `Score for '${word}': ${letterPoints}\n`
+   return letterPoints
 }
 
 let scrabbleScorer;
@@ -91,7 +88,7 @@ function transform() {};
 function runProgram() {
   let word = initialPrompt();
   let scorerFunction = scorerPrompt();
-  console.log(scorerFunction(word));
+  console.log(`Score for '${word}': ${scorerFunction(word)}`);
 }
 
 // Don't write any code below this line //
